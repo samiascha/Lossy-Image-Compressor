@@ -1,0 +1,14 @@
+Partners: Sami Ascha and Victor Gao 
+
+We believe that the assignment has been correctly implemented. Photos are 
+compressed and decompressed with minimal loss.
+
+Architecture:
+    - For compression, we begin by reading in a PPM image, and then 
+      converting the RGB pixels of each 2x2 block in the PPM into a
+      binary bit word using the bit pack interface. We write the 
+      bit word for each block in row-major output to the disk.
+
+    - For decompression, we unpack the bit words using the same bit pack 
+      interface, perform the inverse conversion to get back the RGB pixels, 
+      and then create a PPM image for output.
