@@ -1,7 +1,7 @@
 Partners: Sami Ascha and Victor Gao 
 
 We believe that the assignment has been correctly implemented. Photos are 
-compressed and decompressed with minimal loss.
+compressed and decompressed with minimal (~2.5%) loss.
 
 Architecture:
     - For compression, we begin by reading in a PPM image, and then 
