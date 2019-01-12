@@ -1,12 +1,12 @@
 Partners: Sami Ascha and Victor Gao 
 
-We believe that the assignment has been correctly implemented. Photos are 
-compressed and decompressed with minimal (~2.5%) loss.
+Photos are compressed and decompressed with ~2.5% loss. Must be of type PPM.
 
 Architecture:
-    - For compression, we begin by reading in a PPM image, and then 
-      converting the RGB pixels of each 2x2 block in the PPM into a
-      binary bit word using the bit pack interface. We write the 
+    - For compression, we begin by reading in the image and then 
+      converting the RGB pixels in 2x2 blocks to a
+      binary bit word using the bit pack interface. This is 
+      done using discrete cosine transformation. We write the 
       bit word for each block in row-major output to the disk.
 
     - For decompression, we unpack the bit words using the same bit pack 
